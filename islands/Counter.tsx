@@ -37,12 +37,10 @@ export function Clone1(
   } & CounterProps,
 ) {
   return (
-    <div data-comment=" wrapper" class="" style={{}} data-id="687387">
-      <p.children.type
-        {...p.children.props}
-        data-navfocus={p.count.value % 2 === 1 ? "true" : "false"}
-      />
-    </div>
+    <p.children.type
+      {...p.children.props}
+      data-navfocus={p.count.value % 2 === 1 ? "true" : "false"}
+    />
   );
 }
 
@@ -53,11 +51,9 @@ export function Clone2(
   } & CounterProps,
 ) {
   return (
-    <div data-comment=" wrapper" class="" style={{}} data-id="687387">
-      {cloneElement(p.children, {
-        ["data-navfocus"]: p.count.value % 2 === 1 ? "true" : "false",
-      })}
-    </div>
+    cloneElement(p.children, {
+      ["data-navfocus"]: p.count.value % 2 === 1 ? "true" : "false",
+    })
   );
 }
 
